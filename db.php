@@ -23,8 +23,8 @@ function Createdb(){
         $sql = "
                          CREATE TABLE IF NOT EXISTS leads(
                             id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                            email VARCHAR (25) NOT NULL,
-                            last_name VARCHAR (20),
+                            email VARCHAR (25),
+                            last_name VARCHAR (20) NOT NULL,
                             first_name VARCHAR (20) 
                         );
         ";
