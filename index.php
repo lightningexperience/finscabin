@@ -29,17 +29,17 @@ require_once ("operation.php");
         <div class="d-flex justify-content-center">
             <form action="" method="post" class="w-50">
                 <div class="pt-2">
-                    <?php inputElement("<i class='fas fa-id-badge'></i>","ID", "book_id",setID()); ?>
+                    <?php inputElement("<i class='fas fa-id-badge'></i>","ID", "lead_id",setID()); ?>
                 </div>
                 <div class="pt-2">
-                    <?php inputElement("<i class='fas fa-book'></i>","Book Name", "book_name",""); ?>
+                    <?php inputElement("<i class='fas fa-book'></i>","email", "Email",""); ?>
                 </div>
                 <div class="row pt-2">
                     <div class="col">
-                        <?php inputElement("<i class='fas fa-people-carry'></i>","Publisher", "book_publisher",""); ?>
+                        <?php inputElement("<i class='fas fa-people-carry'></i>","Last Name (required)", "last_name",""); ?>
                     </div>
                     <div class="col">
-                        <?php inputElement("<i class='fas fa-dollar-sign'></i>","Price", "book_price",""); ?>
+                        <?php inputElement("<i class='fas fa-dollar-sign'></i>","First Name", "first_name",""); ?>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
@@ -58,9 +58,9 @@ require_once ("operation.php");
                 <thead class="thead-dark">
                     <tr>
                         <th>ID</th>
-                        <th>Book Name</th>
-                        <th>Publisher</th>
-                        <th>Book Price</th>
+                        <th>Email</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
                         <th>Edit</th>
                     </tr>
                 </thead>
@@ -77,9 +77,9 @@ require_once ("operation.php");
 
                                <tr>
                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['book_name']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['book_publisher']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo '$' . $row['book_price']; ?></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['email']; ?></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['last_name']; ?></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo '$' . $row['first_name']; ?></td>
                                    <td ><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>
                                </tr>
 
