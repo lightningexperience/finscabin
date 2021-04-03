@@ -6,7 +6,7 @@
   "keywords": ["php", "crud", "mysql"],
     "addons": [
     "jawsdb",
-    "CloudAMQP"
+    "cloudamqp"
   ],
   "buildpacks": [
     {
