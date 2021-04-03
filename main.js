@@ -1,5 +1,5 @@
 
-let id = $("input[name*='book_id']")
+let id = $("input[name*='lead_id']")
 id.attr("readonly","readonly");
 
 
@@ -7,9 +7,9 @@ $(".btnedit").click( e =>{
     let textvalues = displayData(e);
 
     ;
-    let bookname = $("input[name*='book_name']");
-    let bookpublisher = $("input[name*='book_publisher']");
-    let bookprice = $("input[name*='book_price']");
+    let email = $("input[name*='email']");
+    let last_name = $("input[name*='last_name']");
+    let first_name = $("input[name*='first_name']");
 
     id.val(textvalues[0]);
     bookname.val(textvalues[1]);
