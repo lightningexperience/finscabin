@@ -24,7 +24,7 @@ function Createdb(){
                          CREATE TABLE IF NOT EXISTS leads(
                             id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                             email VARCHAR (25),
-                            last_name VARCHAR (20) NOT NULL,
+                            last_name VARCHAR (20),
                             first_name VARCHAR (20) 
                         );
         ";
