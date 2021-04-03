@@ -81,7 +81,7 @@ function UpdateData(){
 
     if($email && $last_name && $first_name){
         $sql = "
-                    UPDATE books SET email='$email', last_name = '$last_name', first_name = '$first_name' WHERE id='$leadid';                    
+                    UPDATE leads SET email='$email', last_name = '$last_name', first_name = '$first_name' WHERE id='$leadid';                    
         ";
 
         if(mysqli_query($GLOBALS['con'], $sql)){
@@ -128,7 +128,7 @@ function deleteBtn(){
 
 
 function deleteAll(){
-    $sql = "DROP TABLE books";
+    $sql = "DROP TABLE leads";
 
     if(mysqli_query($GLOBALS['con'], $sql)){
         TextNode("success","All Record deleted Successfully...!");
