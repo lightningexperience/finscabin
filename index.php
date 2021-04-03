@@ -24,7 +24,7 @@ require_once ("operation.php");
 
 <main>
     <div class="container text-center">
-        <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> Book Store</h1>
+        <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> Fins Cabin Workshop</h1>
 
         <div class="d-flex justify-content-center">
             <form action="" method="post" class="w-50">
