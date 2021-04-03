@@ -79,7 +79,7 @@ require_once ("operation.php");
                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></td>
                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['email']; ?></td>
                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['last_name']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo '$' . $row['first_name']; ?></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo '' . $row['first_name']; ?></td>
                                    <td ><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>
                                </tr>
 
