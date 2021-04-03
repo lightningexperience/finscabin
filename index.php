@@ -1,7 +1,6 @@
 <?php
 
-require_once ("component.php");
-require_once ("operation.php");
+
 ?>
 <!DOCTYPE html >
 <html>
