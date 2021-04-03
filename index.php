@@ -32,7 +32,7 @@ require_once ("operation.php");
                     <?php inputElement("<i class='fas fa-id-badge'></i>","ID", "lead_id",setID()); ?>
                 </div>
                 <div class="pt-2">
-                    <?php inputElement("<i class='fas fa-envelope-square'></i>","email", "Email",""); ?>
+                    <?php inputElement("<i class='fas fa-envelope-square'></i>","Email", "email",""); ?>
                 </div>
                 <div class="row pt-2">
                     <div class="col">
