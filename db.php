@@ -16,7 +16,7 @@ $dbname = ltrim($dbparts['path'],'/');
 
     // create connection
   //   $con = mysqli_connect($servername, $username, $password);
-    $conn = mysqli_connect($hostname, $username, $password, $dbname);
+    $con = mysqli_connect($hostname, $username, $password, $dbname);
 
     // Check Connection
     if (!$con){
@@ -28,7 +28,7 @@ $dbname = ltrim($dbparts['path'],'/');
 
     if(mysqli_query($con, $sql)){
    //  $con = mysqli_connect($servername, $username, $password, $dbname);
-        $conn = mysqli_connect($hostname, $username, $password, $dbname);
+        $con = mysqli_connect($hostname, $username, $password, $dbname);
 
         $sql = "
                          CREATE TABLE IF NOT EXISTS leads(
