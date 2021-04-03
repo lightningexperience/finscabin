@@ -28,7 +28,7 @@ require_once ("operation.php");
 
         <div class="d-flex justify-content-center">
             <form action="" method="post" class="w-50">
-                <div class="pt-2">
+                <div class="pt-2" style="display:none;">
                     <?php inputElement("<i class='fas fa-id-badge'></i>","ID", "lead_id",setID()); ?>
                 </div>
                 <div class="pt-2">
