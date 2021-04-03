@@ -21,7 +21,7 @@ function Createdb(){
         $con = mysqli_connect($servername, $username, $password, $dbname);
 
         $sql = "
-                        CREATE TABLE IF NOT EXISTS books(
+                        CREATE TABLE IF NOT EXISTS leads(
                             id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                            email VARCHAR (45),
                            last_name VARCHAR (45) NOT NULL,
