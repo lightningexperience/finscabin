@@ -4,6 +4,18 @@
   "repository": "https://github.com/lightningexperience/finscabin",
   "logo": "",
   "keywords": ["php", "crud", "mysql"],
+    "addons": [
+    "JawsDB MySQL",
+    {
+      "plan": "Kitefin Shared",
+      "as": "JawsDB"
+    },
+      "CloudAMQP",
+    {
+      "plan": "Little Lemur"
+      }
+    }
+  ],
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-php"
