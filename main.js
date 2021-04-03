@@ -12,9 +12,9 @@ $(".btnedit").click( e =>{
     let first_name = $("input[name*='first_name']");
 
     id.val(textvalues[0]);
-    bookname.val(textvalues[1]);
-    bookpublisher.val(textvalues[2]);
-    bookprice.val(textvalues[3].replace("$", ""));
+    email.val(textvalues[1]);
+    last_name.val(textvalues[2]);
+    first_name.val(textvalues[3].replace("", ""));
 });
 
 
