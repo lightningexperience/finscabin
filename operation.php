@@ -24,14 +24,14 @@ if(isset($_POST['deleteall'])){
 }
 
 function createData(){
-    $bookname = textboxValue("book_name");
-    $bookpublisher = textboxValue("book_publisher");
-    $bookprice = textboxValue("book_price");
+    $email = textboxValue("email");
+    $last_name = textboxValue("last_name");
+    $first_name = textboxValue("first_name");
 
-    if($bookname && $bookpublisher && $bookprice){
+    if($email && $last_name && $first_name){
 
-        $sql = "INSERT INTO books (book_name, book_publisher, book_price) 
-                        VALUES ('$bookname','$bookpublisher','$bookprice')";
+        $sql = "INSERT INTO leads (email, last_name, first_name) 
+                        VALUES ('$email','$last_name','$first_name')";
 
         if(mysqli_query($GLOBALS['con'], $sql)){
             TextNode("success", "Record Successfully Inserted...!");
@@ -63,7 +63,7 @@ function TextNode($classname, $msg){
 
 // get data from mysql database
 function getData(){
-    $sql = "SELECT * FROM books";
+    $sql = "SELECT * FROM leads";
 
     $result = mysqli_query($GLOBALS['con'], $sql);
 
@@ -74,14 +74,14 @@ function getData(){
 
 // update dat
 function UpdateData(){
-    $bookid = textboxValue("book_id");
-    $bookname = textboxValue("book_name");
-    $bookpublisher = textboxValue("book_publisher");
-    $bookprice = textboxValue("book_price");
+    $leadid = textboxValue("lead_id");
+    $email = textboxValue("email");
+    $last_name = textboxValue("last_name");
+    $first_name = textboxValue("first_name");
 
-    if($bookname && $bookpublisher && $bookprice){
+    if($email && $last_name && $first_name){
         $sql = "
-                    UPDATE books SET book_name='$bookname', book_publisher = '$bookpublisher', book_price = '$bookprice' WHERE id='$bookid';                    
+                    UPDATE books SET email='$email', last_name = '$last_name', first_name = '$first_name' WHERE id='$leadid';                    
         ";
 
         if(mysqli_query($GLOBALS['con'], $sql)){
@@ -99,9 +99,9 @@ function UpdateData(){
 
 
 function deleteRecord(){
-    $bookid = (int)textboxValue("book_id");
+    $leadid = (int)textboxValue("lead_id");
 
-    $sql = "DELETE FROM books WHERE id=$bookid";
+    $sql = "DELETE FROM leads WHERE id=$leadid";
 
     if(mysqli_query($GLOBALS['con'], $sql)){
         TextNode("success","Record Deleted Successfully...!");
