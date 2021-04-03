@@ -14,6 +14,7 @@ require_once ("operation.php");
         <center> <img src="wide-characters.jpg"> 
         <h1>   Fins Cabin Workshop </h1> </div>  
         </center>
+    <a href="leads.php">Leads </a> 
      <center> <div style="margin: 30px; margin-top: 20px;"> 
 
  <p> Example usage of Salesforce Platform APIs: Update your own on-premise/cloud application by retrieving data from Salesforce application. </p>
