@@ -18,7 +18,7 @@ require_once ("operation.php");
      <center> <div style="margin: 30px; margin-top: 20px;"> 
 
    <a href="leads.php">Leads </a> &nbsp;&nbsp;&nbsp;<a href="accounts.php">Accounts</a> 
-    <hr>
+    <hr style="width:70%;">
          </div></center>
         
    
