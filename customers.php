@@ -86,9 +86,13 @@ if(isset($_POST['submit_button']))
 }
 
 ?>
+       <div style="margin-bottom:10px;">
 <form method="post" action="">
     <input name="submit_button" type="submit" value=" Truncate Table " />
 </form>
+ header("Location: " . $_SERVER['PHP_SELF']);
+ exit();       
+       </div>
        
 <!--     Delete -->
 
