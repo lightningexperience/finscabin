@@ -88,9 +88,9 @@ if(isset($_POST['submit_button']))
 }
 
 ?>
-       <div style="margin-bottom:10px;">
+<div style="margin-bottom:10px;">
 <form method="post" action="">
-    <input name="submit_button" type="submit" value=" Truncate Table " />
+    <input style="background-color: red; color:white; text-decoration: none;" name="submit_button" type="submit" value=" Truncate Table " />
 </form>
     
        </div>
