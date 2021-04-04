@@ -43,21 +43,7 @@ if ($con->connect_error) {
      </div></center>
           <!--Navigation -->
         
-        
-<?php
-$sql = "SELECT email, name, address FROM customers";
-$result = $con->query($sql);
-?>
-
-  <!-- Delete All  --> 
-
-
-  <!-- Delete All  --> 
-
-        
- <!-- Results  -->
-   
- <!-- Results  -->   
+ 
        
 
 </div> </main>
