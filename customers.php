@@ -34,7 +34,6 @@ require_once ("operation-customers.php");
                         <th>Email</th>
                         <th>Name</th>
                         <th>Address</th>
-                        
                     </tr>
                 </thead>
                 <tbody id="tbody">
@@ -49,10 +48,10 @@ require_once ("operation-customers.php");
                            while ($row = mysqli_fetch_assoc($result)){ ?>
 
                                <tr>
-                                  
+      
                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['email']; ?></td>
                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo '' . $row['address']; ?></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['address']; ?></td>
                                   
                                </tr>
 
