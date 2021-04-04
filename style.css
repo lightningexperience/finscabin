@@ -27,7 +27,7 @@ table .btnedit{
 h1 {
 	display: inline;
 	position: relative;
-	font: 200px Helvetica, Sans-Serif;
+	font: 32px Helvetica, Sans-Serif;
 	letter-spacing: -5px;
 	color: rgba(0,0,255,0.5); 
 }
