@@ -3,20 +3,10 @@ require_once ("db.php");
 require_once ("component.php");
 
 $con = Createdb();
-// get data from mysql database
-function getData(){
-    $sql = "SELECT email, name, address FROM customers";
-    $result = mysqli_query($GLOBALS['con'], $sql);
-    if(mysqli_num_rows($result) > 0){
-        return $result;
-    }
-}
 // Check connection
 if ($con->connect_error) {
   die("Connection failed: " . $con->connect_error);
 }
-
-
 ?>
 
 <!doctype html>
