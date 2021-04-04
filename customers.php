@@ -43,26 +43,15 @@ if ($con->connect_error) {
           <!--Navigation -->
         
         
-        <?php
-
+<?php
 $sql = "SELECT email, name, address FROM customers";
 $result = $con->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "*" . $row["email"]. " -  " . $row["name"]. " - " . $row["address"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
-
 ?>
         
  <!-- Results  -->
        <?php
-       echo '<table border="0" cellspacing="2" cellpadding="2"> 
-      <tr> 
+       echo '<table border="1" cellspacing="2" cellpadding="2"> 
+      <tr border="0"> 
           <td> <font face="Arial">Email</font> </td> 
           <td> <font face="Arial">Name</font> </td> 
           <td> <font face="Arial">Address</font> </td> 
@@ -75,7 +64,7 @@ if ($result = $con->query($sql)) {
         $field3name = $row["address"];
 
 
-        echo '<tr> 
+        echo '<tr border="1"> 
                   <td>'.$field1name.'</td> 
                   <td>'.$field2name.'</td> 
                   <td>'.$field3name.'</td> 
