@@ -1,12 +1,8 @@
 <?php
 require_once ("db.php");
-require_once ("component.php");
+
   <!-- connection -->
 $con = Createdb();
-// Check connection
-if ($con->connect_error) {
-  die("Connection failed: " . $con->connect_error);
-}
   <!-- connection -->
 
 ?>
