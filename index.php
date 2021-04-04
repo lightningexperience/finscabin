@@ -16,7 +16,7 @@
    
      <center> <div style="margin: 30px; margin-top: 20px;"> 
 
-   <a href="leads.php">Leads </a> &nbsp;&nbsp;&nbsp;<a href="accounts.php">Accounts</a> 
+   <a href="leads.php">Leads </a> &nbsp;&nbsp;&nbsp;<a href="customers.php">Customers</a> 
     <hr style="width:70%;">
          </div></center>
         
