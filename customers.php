@@ -51,16 +51,7 @@ $result = $con->query($sql);
 ?>
 
   <!-- Delete All  --> 
-<?php
-if(isset($_POST['submit_button']))
-{
-    mysqli_query($con, 'TRUNCATE TABLE `customers`');
-}
 
-?>
-<form method="post" action="">
-    <input name="submit_button" type="submit" value=" Truncate Table " />
-</form>
 
   <!-- Delete All  --> 
 
