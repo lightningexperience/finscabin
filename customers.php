@@ -49,15 +49,7 @@ if ($con->connect_error) {
 $sql = "SELECT email, name, address FROM customers";
 $result = $con->query($sql);
 ?>
-         <!-- delete all button --> 
- <?php   
-function deleteBtn(){
-buttonElement("btn-deleteall", "btn btn-danger" ,"<i class='fas fa-trash'></i> Delete All", "deleteall", "");
-}
-if(isset($_POST['deleteall'])){deleteAll();}
-function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
-?>
-  <!-- delete all button -->
+
   <!-- Delete All  -->  
         <div class="d-flex justify-content-center">
         <form action="" method="post" class="w-50">
@@ -68,6 +60,15 @@ function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
         </form>
         </div>
    <!-- Delete All  --> 
+                <!-- delete all button --> 
+ <?php   
+function deleteBtn(){
+buttonElement("btn-deleteall", "btn btn-danger" ,"<i class='fas fa-trash'></i> Delete All", "deleteall", "");
+}
+if(isset($_POST['deleteall'])){deleteAll();}
+function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
+?>
+  <!-- delete all button -->
         
  <!-- Results  -->
        <center> <div style="margin-bottom:30px; padding-bottom:30px;">
