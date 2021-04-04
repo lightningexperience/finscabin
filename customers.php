@@ -11,6 +11,10 @@ function getData(){
         return $result;
     }
 }
+// Check connection
+if ($con->connect_error) {
+  die("Connection failed: " . $con->connect_error);
+}
 
 
 ?>
@@ -36,50 +40,25 @@ function getData(){
 <main>
     <div class="container text-center">
         <h1 class="py-4 bg-dark text-light rounded"> <i class="fas fa-comments-dollar    "></i> Fins Cabin Workshop</h1>
-
-               <div class="d-flex justify-content-center">
-               <?php buttonElement("btn-read","btn btn-primary","<i class='fas fa-sync'></i>","read","data-toggle='tooltip' data-placement='bottom' title='Read'"); ?>
-                </div>
         
         
-        <!-- Bootstrap table  -->
-        <div class="d-flex table-data">
-            <table class="table table-striped table-dark">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Email</th>
-                        <th>Name</th>
-                        <th>Address</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                   <?php
-                   if(isset($_POST['read'])){
-                       $result = getData();
+        <?php
 
-                       if($result){
+$sql = "SELECT email, name, address FROM customers";
+$result = $con->query($sql);
 
-                           while ($row = mysqli_fetch_assoc($result)){ ?>
-
-                               <tr>
-      
-                                   <td >  <?php echo $row['email'];  ?>  </td>
-                                   <td >  <?php echo $row['name'];   ?>  </td>
-                                   <td >  <?php echo $row['address']; ?> </td>
-                                  
-                               </tr>
-
-                   <?php
-                           }
-
-                       }
-                   }
-
-
-                   ?>
-                </tbody>
-            </table>
-        </div>
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "*" . $row["email"]. " -  " . $row["name"]. " - " . $row["address"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$con->close();
+?>
+        
+        
 
 
     </div>
