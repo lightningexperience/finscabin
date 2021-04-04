@@ -37,6 +37,11 @@ function getData(){
     <div class="container text-center">
         <h1 class="py-4 bg-dark text-light rounded"> <i class="fas fa-comments-dollar    "></i> Fins Cabin Workshop</h1>
 
+               <div class="d-flex justify-content-center">
+               <?php buttonElement("btn-read","btn btn-primary","<i class='fas fa-sync'></i>","read","data-toggle='tooltip' data-placement='bottom' title='Read'"); ?>
+                </div>
+        
+        
         <!-- Bootstrap table  -->
         <div class="d-flex table-data">
             <table class="table table-striped table-dark">
