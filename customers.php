@@ -26,38 +26,11 @@ require_once ("operation-customers.php");
     <div class="container text-center">
         <h1 class="py-4 bg-dark text-light rounded"> <i class="fas fa-comments-dollar    "></i> Fins Cabin Workshop</h1>
 
-        <div style="display:none;" class="d-flex justify-content-center">
-            <form action="" method="post" class="w-50">
-                <div class="pt-2" style="display:none;">
-                    <?php inputElement("<i class='fas fa-id-badge'></i>","ID", "lead_id",setID()); ?>
-                </div>
-                <div class="pt-2">
-                    <?php inputElement("<i class='fas fa-envelope-square'></i>","Email", "email",""); ?>
-                </div>
-                <div class="row pt-2">
-                    <div class="col">
-                        <?php inputElement("<i class='fas fa-user'></i>","Last Name (required)", "last_name",""); ?>
-                    </div>
-                    <div class="col">
-                        <?php inputElement("<i class='fas fa-user'></i>","First Name", "first_name",""); ?>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                        <?php buttonElement("btn-create","btn btn-success","<i class='fas fa-plus'></i>","create","data-toggle='tooltip' data-placement='bottom' title='Create'"); ?>
-                        <?php buttonElement("btn-read","btn btn-primary","<i class='fas fa-sync'></i>","read","data-toggle='tooltip' data-placement='bottom' title='Read'"); ?>
-                        <?php buttonElement("btn-update","btn btn-light border","<i class='fas fa-pen-alt'></i>","update","data-toggle='tooltip' data-placement='bottom' title='Update'"); ?>
-                        <?php buttonElement("btn-delete","btn btn-danger","<i class='fas fa-trash-alt'></i>","delete","data-toggle='tooltip' data-placement='bottom' title='Delete'"); ?>
-                        <?php deleteBtn();?>
-                </div>
-            </form>
-        </div>
-
         <!-- Bootstrap table  -->
         <div class="d-flex table-data">
             <table class="table table-striped table-dark">
                 <thead class="thead-dark">
                     <tr>
-                        
                         <th>Email</th>
                         <th>Name</th>
                         <th>Address</th>
