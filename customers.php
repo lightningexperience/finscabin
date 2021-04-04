@@ -50,25 +50,20 @@ $sql = "SELECT email, name, address FROM customers";
 $result = $con->query($sql);
 ?>
 
-  <!-- Delete All  -->  
-        <div class="d-flex justify-content-center">
-        <form action="" method="post" class="w-50">
-              <div class="d-flex justify-content-center">
-                <?php deleteBtn();?>
-              </div>
-              
-        </form>
-        </div>
-   <!-- Delete All  --> 
-                <!-- delete all button --> 
- <?php   
-function deleteBtn(){
-buttonElement("btn-deleteall", "btn btn-danger" ,"<i class='fas fa-trash'></i> Delete All", "deleteall", "");
+  <!-- Delete All  --> 
+<?php
+if(isset($_POST['submit_button']))
+{
+    mysqli_query($con, 'TRUNCATE TABLE `customers`');
 }
-if(isset($_POST['deleteall'])){deleteAll();}
-function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
+
 ?>
-  <!-- delete all button -->
+<form method="post" action="">
+    <input name="submit_button" type="submit" value=" Truncate Table " />
+</form>
+
+  <!-- Delete All  --> 
+
         
  <!-- Results  -->
        <center> <div style="margin-bottom:30px; padding-bottom:30px;">
