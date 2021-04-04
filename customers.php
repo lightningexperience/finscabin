@@ -51,17 +51,8 @@ $result = $con->query($sql);
 ?>
          <!-- delete all button --> 
  <?php   
-    function deleteBtn(){
-    $i = 0;
-    if($result){
-        while ($row = mysqli_fetch_assoc($result)){
-            $i++;
-            if($i > 0){
-                buttonElement("btn-deleteall", "btn btn-danger" ,"<i class='fas fa-trash'></i> Delete All", "deleteall", "");
-                return;
-            }
-        }
-    }
+function deleteBtn(){
+buttonElement("btn-deleteall", "btn btn-danger" ,"<i class='fas fa-trash'></i> Delete All", "deleteall", "");
 }
 if(isset($_POST['deleteall'])){deleteAll();}
 function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
