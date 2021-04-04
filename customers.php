@@ -37,7 +37,30 @@ require_once ("operation-customers.php");
                     </tr>
                 </thead>
                 <tbody id="tbody">
-                   
+                   <?php
+                   if(isset($_POST['read'])){
+                       $result = getData();
+
+                       if($result){
+
+                           while ($row = mysqli_fetch_assoc($result)){ ?>
+
+                               <tr>
+      
+                                   <td >  <?php echo $row['email'];  ?>  </td>
+                                   <td >  <?php echo $row['name'];   ?>  </td>
+                                   <td >  <?php echo $row['address']; ?> </td>
+                                  
+                               </tr>
+
+                   <?php
+                           }
+
+                       }
+                   }
+
+
+                   ?>
                 </tbody>
             </table>
         </div>
