@@ -49,6 +49,7 @@ $result = $con->query($sql);
 ?>
         
  <!-- Results  -->
+       <center> <div style="margin-bottom:30px; padding-bottom:30px;">
        <?php
        echo '<table border="1" cellspacing="2" cellpadding="2"> 
       <tr border="0"> 
@@ -74,7 +75,7 @@ if ($result = $con->query($sql)) {
     $con->close();
 } 
   ?>
-       
+         </div> </center>
  <!-- Results  -->   
 
 
