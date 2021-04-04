@@ -5,24 +5,6 @@ require_once ("component.php");
 
 $con = Createdb();
 
-
-function textboxValue($value){
-    $textbox = mysqli_real_escape_string($GLOBALS['con'], trim($_POST[$value]));
-    if(empty($textbox)){
-        return false;
-    }else{
-        return $textbox;
-    }
-}
-
-
-// messages
-function TextNode($classname, $msg){
-    $element = "<h6 class='$classname'>$msg</h6>";
-    echo $element;
-}
-
-
 // get data from mysql database
 function getData(){
     $sql = "SELECT * FROM customers";
