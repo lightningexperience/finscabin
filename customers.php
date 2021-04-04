@@ -1,12 +1,17 @@
 <?php
 require_once ("db.php");
 require_once ("component.php");
-
+  <!-- connection -->
 $con = Createdb();
 // Check connection
 if ($con->connect_error) {
   die("Connection failed: " . $con->connect_error);
 }
+  <!-- connection -->
+  <!-- delete all button -->
+if(isset($_POST['deleteall'])){deleteAll();}
+function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
+  <!-- delete all button -->
 ?>
 
 <!doctype html>
