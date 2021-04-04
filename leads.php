@@ -64,7 +64,7 @@ require_once ("operation.php");
         </div>
 
         <!-- Bootstrap table  -->
-        <div class="d-flex table-data">
+        <div class="d-flex table-data" style="margin-bottom:30px; padding-bottom:30px;">
             <table class="table table-striped table-dark">
                 <thead class="thead-dark">
                     <tr>
