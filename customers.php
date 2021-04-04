@@ -2,17 +2,19 @@
 require_once ("db.php");
 require_once ("component.php");
 
-  <!-- connection -->
 $con = Createdb();
-  <!-- connection -->
-
+// Check connection
+if ($con->connect_error) {
+  die("Connection failed: " . $con->connect_error);
+}
 ?>
 
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fins Cabin</title>
 
@@ -25,7 +27,8 @@ $con = Createdb();
 </head>
 <body>
 
-<main> <div class="container text-center">
+<main>
+    <div class="container text-center">
                <!--Navigation -->
      <div style="margin: 30px; margin-top: 50px;">  <center> 
       <h1 >   Fins Cabin Workshop </h1> 
@@ -38,15 +41,15 @@ $con = Createdb();
          <h3> Customer Information <h3> 
      </div></center>
           <!--Navigation -->
-                
+        
+        
 <?php
 $sql = "SELECT email, name, address FROM customers";
 $result = $con->query($sql);
 ?>
         
  <!-- Results  -->
-       
-           <center> <div style="margin-bottom:30px; padding-bottom:30px;">
+       <center> <div style="margin-bottom:30px; padding-bottom:30px;">
        <?php
        echo '<table border="1" cellspacing="2" cellpadding="2"> 
       <tr border="0"> 
@@ -73,12 +76,12 @@ if ($result = $con->query($sql)) {
 } 
   ?>
          </div> </center>
-   
- <!-- Results  -->  
- 
-       
+ <!-- Results  -->   
 
-</div> </main>
+
+    </div>
+</main>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
