@@ -20,17 +20,16 @@
 </head>
 <body>
     <div style="margin: 30px; margin-top: 50px;"> 
-        <center> 
-        <h1 >   Fins Cabin Workshop </h1> 
-        <h3> Event Driven Architecture in Financial Services <h3> 
-         <img src="wide-characters.jpg"> 
+     <center> 
+      <h1 >   Fins Cabin Workshop </h1> 
+      <h3> Event Driven Architecture in Financial Services <h3> 
+      <img src="wide-characters.jpg"> 
       </div>  
-        </center>
+      </center>
      <center> <div style="margin: 30px; margin-top: 20px;"> 
-
-   <a class="more" href="leads.php">Leads </a> &nbsp;&nbsp;&nbsp;<a class="more" href="customers.php">Customers</a> 
+    <a class="more" href="leads.php">Leads </a> &nbsp;&nbsp;&nbsp;<a class="more" href="customers.php">Customers</a> 
     <hr style="width:70%;">
-         </div></center>
+     </div></center>
         
    
       
