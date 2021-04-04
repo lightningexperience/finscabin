@@ -56,10 +56,37 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
-$con->close();
+
 ?>
         
-        
+ <!-- Results  -->
+       <?php
+       echo '<table border="0" cellspacing="2" cellpadding="2"> 
+      <tr> 
+          <td> <font face="Arial">Email</font> </td> 
+          <td> <font face="Arial">Name</font> </td> 
+          <td> <font face="Arial">Address</font> </td> 
+      </tr>';
+
+if ($result = $con->query($sql)) {
+    while ($row = $result->fetch_assoc()) {
+        $field1name = $row["email"];
+        $field2name = $row["name"];
+        $field3name = $row["address"];
+
+
+        echo '<tr> 
+                  <td>'.$field1name.'</td> 
+                  <td>'.$field2name.'</td> 
+                  <td>'.$field3name.'</td> 
+              </tr>';
+    }
+    $result->free();
+    $con->close();
+} 
+  ?>
+       
+ <!-- Results  -->   
 
 
     </div>
