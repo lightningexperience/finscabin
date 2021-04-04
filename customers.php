@@ -24,9 +24,9 @@ require_once ("operation-customers.php");
 
 <main>
     <div class="container text-center">
-        <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-comments-dollar    "></i> Fins Cabin Workshop</h1>
+        <h1 class="py-4 bg-dark text-light rounded"> <i class="fas fa-comments-dollar    "></i> Fins Cabin Workshop</h1>
 
-        <div class="d-flex justify-content-center">
+        <div style="display:none;" class="d-flex justify-content-center">
             <form action="" method="post" class="w-50">
                 <div class="pt-2" style="display:none;">
                     <?php inputElement("<i class='fas fa-id-badge'></i>","ID", "lead_id",setID()); ?>
@@ -57,11 +57,11 @@ require_once ("operation-customers.php");
             <table class="table table-striped table-dark">
                 <thead class="thead-dark">
                     <tr>
-                        <th>ID</th>
+                        
                         <th>Email</th>
-                        <th>Last Name</th>
-                        <th>First Name</th>
-                        <th>Edit</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        
                     </tr>
                 </thead>
                 <tbody id="tbody">
@@ -76,11 +76,11 @@ require_once ("operation-customers.php");
                            while ($row = mysqli_fetch_assoc($result)){ ?>
 
                                <tr>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></td>
+                                  
                                    <td data-id="<?php echo $row['id']; ?>"><?php echo $row['email']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['last_name']; ?></td>
-                                   <td data-id="<?php echo $row['id']; ?>"><?php echo '' . $row['first_name']; ?></td>
-                                   <td ><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></td>
+                                   <td data-id="<?php echo $row['id']; ?>"><?php echo '' . $row['address']; ?></td>
+                                  
                                </tr>
 
                    <?php
