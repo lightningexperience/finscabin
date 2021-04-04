@@ -29,4 +29,5 @@ h1 {
 	color: rgba(0,0,255,0.5); 
 }
 
+a.read-more { background-color: #605833; border-radius: 5px 5px 5px 5px; color: white; float: right; font-family: Enriqueta,Arial,sans-serif; text-transform: uppercase; font-size: 24px; padding: 3px 10px; }
 
