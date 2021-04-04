@@ -15,8 +15,7 @@ if ($con->connect_error) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fins Cabin</title>
 
@@ -42,7 +41,43 @@ if ($con->connect_error) {
          <h3> Customer Information <h3> 
      </div></center>
           <!--Navigation -->
+                
+<?php
+$sql = "SELECT email, name, address FROM customers";
+$result = $con->query($sql);
+?>
         
+ <!-- Results  -->
+       
+           <center> <div style="margin-bottom:30px; padding-bottom:30px;">
+       <?php
+       echo '<table border="1" cellspacing="2" cellpadding="2"> 
+      <tr border="0"> 
+          <td> <font face="Arial">Email</font> </td> 
+          <td> <font face="Arial">Name</font> </td> 
+          <td> <font face="Arial">Address</font> </td> 
+      </tr>';
+
+if ($result = $con->query($sql)) {
+    while ($row = $result->fetch_assoc()) {
+        $field1name = $row["email"];
+        $field2name = $row["name"];
+        $field3name = $row["address"];
+
+
+        echo '<tr border="1"> 
+                  <td>'.$field1name.'</td> 
+                  <td>'.$field2name.'</td> 
+                  <td>'.$field3name.'</td> 
+              </tr>';
+    }
+    $result->free();
+    $con->close();
+} 
+  ?>
+         </div> </center>
+   
+ <!-- Results  -->  
  
        
 
