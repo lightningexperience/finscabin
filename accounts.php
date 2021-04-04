@@ -1,7 +1,7 @@
 <?php
 
 require_once ("component.php");
-require_once ("operation.php");
+require_once ("operation-accounts.php");
 ?>
 
 <!doctype html>
