@@ -1,6 +1,4 @@
 <?php
-
-
 ?>
 <!DOCTYPE html >
 <html>
@@ -11,7 +9,7 @@
 <body>
     <div style="margin: 30px; margin-top: 50px;"> 
         <center> <img src="wide-characters.jpg"> 
-        <h1>   Fins Cabin Workshop </h1> </div>  
+        <h1 class="display-4">   Fins Cabin Workshop </h1> </div>  
         </center>
    
      <center> <div style="margin: 30px; margin-top: 20px;"> 
