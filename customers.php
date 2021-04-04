@@ -29,7 +29,18 @@ if ($con->connect_error) {
 
 <main>
     <div class="container text-center">
-        <h1 class="py-4 bg-dark text-light rounded"> <i class="fas fa-comments-dollar    "></i> Fins Cabin Workshop</h1>
+               <!--Navigation -->
+     <div style="margin: 30px; margin-top: 50px;">  <center> 
+      <h1 >   Fins Cabin Workshop </h1> 
+      <h3> Event Driven Architecture in Financial Services <h3> 
+      <img src="wide-characters.jpg"> 
+      </div>  </center>
+     <center> <div style="margin: 30px; margin-top: 20px;"> 
+    <a class="more" href="index.php">Home </a> &nbsp;&nbsp;&nbsp; <a class="more" href="leads.php">Leads </a> &nbsp;&nbsp;&nbsp;<a class="more" href="customers.php">Customers</a> 
+    <hr style="width:70%;">
+         <h3> Customer Information <h3> 
+     </div></center>
+          <!--Navigation -->
         
         
         <?php
