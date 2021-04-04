@@ -8,10 +8,7 @@ if ($con->connect_error) {
   die("Connection failed: " . $con->connect_error);
 }
   <!-- connection -->
-  <!-- delete all button -->
-if(isset($_POST['deleteall'])){deleteAll();}
-function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
-  <!-- delete all button -->
+
 ?>
 
 <!doctype html>
@@ -52,6 +49,34 @@ function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
 $sql = "SELECT email, name, address FROM customers";
 $result = $con->query($sql);
 ?>
+         <!-- delete all button --> 
+ <?php   
+    function deleteBtn(){
+    $i = 0;
+    if($result){
+        while ($row = mysqli_fetch_assoc($result)){
+            $i++;
+            if($i > 0){
+                buttonElement("btn-deleteall", "btn btn-danger" ,"<i class='fas fa-trash'></i> Delete All", "deleteall", "");
+                return;
+            }
+        }
+    }
+}
+if(isset($_POST['deleteall'])){deleteAll();}
+function deleteAll(){ $sql = "TRUNCATE TABLE customers";}
+?>
+  <!-- delete all button -->
+  <!-- Delete All  -->  
+        <div class="d-flex justify-content-center">
+        <form action="" method="post" class="w-50">
+              <div class="d-flex justify-content-center">
+                <?php deleteBtn();?>
+              </div>
+              
+        </form>
+        </div>
+   <!-- Delete All  --> 
         
  <!-- Results  -->
        <center> <div style="margin-bottom:30px; padding-bottom:30px;">
@@ -82,7 +107,11 @@ if ($result = $con->query($sql)) {
   ?>
          </div> </center>
  <!-- Results  -->   
+       
+       
 
+ 
+       
 
     </div>
 </main>
