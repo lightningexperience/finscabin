@@ -20,9 +20,10 @@
 </head>
 <body>
     <div style="margin: 30px; margin-top: 50px;"> 
-        <center> <img src="wide-characters.jpg"> 
+        <center> 
         <h1 >   Fins Cabin Workshop </h1> 
-        <h3> Event Driven Architecture in Financial Services <h3>   
+        <h3> Event Driven Architecture in Financial Services <h3> 
+         <img src="wide-characters.jpg"> 
       </div>  
         </center>
      <center> <div style="margin: 30px; margin-top: 20px;"> 
