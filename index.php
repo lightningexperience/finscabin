@@ -26,7 +26,7 @@
       <img src="wide-characters.jpg"> 
       </div>  </center>
      <center> <div style="margin: 30px; margin-top: 20px;"> 
-    <a class="more" href="leads.php">Leads </a> &nbsp;&nbsp;&nbsp;<a class="more" href="customers.php">Customers</a> 
+    <a class="more" href="index.php">Home </a> &nbsp;&nbsp;&nbsp; <a class="more" href="leads.php">Leads </a> &nbsp;&nbsp;&nbsp;<a class="more" href="customers.php">Customers</a> 
     <hr style="width:70%;">
      </div></center>
      <!--Navigation -->
