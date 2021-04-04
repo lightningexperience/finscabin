@@ -83,6 +83,8 @@ $dbc = Createdb();
 if(isset($_POST['submit_button']))
 {
     mysqli_query($dbc, 'TRUNCATE TABLE `customers`');
+     header("Location: " . $_SERVER['PHP_SELF']);
+     exit();   
 }
 
 ?>
@@ -90,8 +92,7 @@ if(isset($_POST['submit_button']))
 <form method="post" action="">
     <input name="submit_button" type="submit" value=" Truncate Table " />
 </form>
- header("Location: " . $_SERVER['PHP_SELF']);
- exit();       
+    
        </div>
        
 <!--     Delete -->
