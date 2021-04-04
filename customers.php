@@ -76,7 +76,21 @@ if ($result = $con->query($sql)) {
 } 
   ?>
          </div> </center>
- <!-- Results  -->   
+ <!-- Results  -->  
+ <!--     Delete -->      
+<?php
+$dbc = Createdb();
+if(isset($_POST['submit_button']))
+{
+    mysqli_query($dbc, 'TRUNCATE TABLE `customers`');
+}
+
+?>
+<form method="post" action="">
+    <input name="submit_button" type="submit" value=" Truncate Table " />
+</form>
+       
+<!--     Delete -->
 
 
     </div>
