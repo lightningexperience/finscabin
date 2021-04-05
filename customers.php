@@ -44,7 +44,7 @@ if ($con->connect_error) {
         
         
 <?php
-$sql = "SELECT email, name, address FROM customers";
+$sql = "SELECT accountid, name, address FROM customers";
 $result = $con->query($sql);
 ?>
         
@@ -53,14 +53,14 @@ $result = $con->query($sql);
        <?php
        echo '<table border="1" cellspacing="2" cellpadding="2"> 
       <tr border="0"> 
-          <td> <font face="Arial">Email</font> </td> 
+          <td> <font face="Arial">Account ID</font> </td> 
           <td> <font face="Arial">Name</font> </td> 
           <td> <font face="Arial">Address</font> </td> 
       </tr>';
 
 if ($result = $con->query($sql)) {
     while ($row = $result->fetch_assoc()) {
-        $field1name = $row["email"];
+        $field1name = $row["accountid"];
         $field2name = $row["name"];
         $field3name = $row["address"];
 
